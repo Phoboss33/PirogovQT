@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+  postgres:
+    image: postgres:12.19-alpine3.19
+    restart: always
+    environment:
+      POSTGRES_USER: phob
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: pirogov_postgres_1
+    ports:
+      - "8080:5432" 
