@@ -1,0 +1,41 @@
+-- Создание таблицы для жанров
+CREATE TABLE genres (
+    genre_id SERIAL PRIMARY KEY,
+    name VARCHAR(255) UNIQUE NOT NULL
+);
+
+-- Создание таблицы для пользователей
+CREATE TABLE users (
+    user_id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+-- Создание таблицы для администраторов и работников считается необязательным,
+-- так как их можно интегрировать в таблицу пользователей,
+-- добавив поле role ENUM('admin', 'user', 'employee') в таблицу users.
+-- Однако, если требуется разделение, создайте аналогичные таблицы с уникальными полями.
+
+-- Создание таблицы для товаров (диски)
+CREATE TABLE disks (
+    disk_id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    release_year INT,
+    genre_id INT,
+    price DECIMAL(10,2) NOT NULL,
+    stock INT NOT NULL DEFAULT 0,
+    FOREIGN KEY (genre_id) REFERENCES genres(genre_id)
+);
+
+-- Создание таблицы для заказов
+CREATE TABLE orders (
+    order_id SERIAL PRIMARY KEY,
+    user_id INT NOT NULL,
+    disk_id INT NOT NULL,
+    order_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    return_date TIMESTAMP,
+    status VARCHAR(50) NOT NULL DEFAULT 'processing',
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (disk_id) REFERENCES disks(disk_id)
+);
