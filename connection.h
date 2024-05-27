@@ -6,31 +6,26 @@
 #include <QSqlDatabase>
 
 inline bool createConnection() {
-    QSqlDatabase db = QSqlDatabase::addDatabase("QPSQL");
-    db.setHostName("localhost");
-    db.setPort(8080);
-    db.setDatabaseName("postgres");
-    db.setUserName("phob");
-    db.setPassword("postgres");
+    // Используем имя соединения, которое будет использоваться во всем приложении
+    QString connectionName = "unique_connection_name";
 
-    if (!db.open()) {
-        QMessageBox::warning(0, "Ошибка БД", db.lastError().text());
-        return false;
-    }
-    else {
-        QMessageBox::information(0, "Успешно", "Соединение с БД установлено!");
-        return true;
-    }
-}
+    // Проверяем, существует ли соединение
+    if (!QSqlDatabase::contains(connectionName)) {
+        QSqlDatabase db = QSqlDatabase::addDatabase("QPSQL", connectionName);
+        db.setHostName("localhost");
+        db.setPort(8080);
+        db.setDatabaseName("postgres");
+        db.setUserName("phob");
+        db.setPassword("postgres");
 
-inline bool createTables() {
-    QSqlQuery query;
-    query.exec("CREATE TABLE passwords ("
-               "id INTEGER PRIMARY KEY, "
-               "login VARCHAR(10) NOT NULL, "
-               "passwd VARCHER(10) NOT NULL, "
-               "datepass DATE NOT NULL)");
-    return(1);
+        if (!db.open()) {
+            QMessageBox::warning(0, "Ошибка БД", db.lastError().text());
+            return false;
+        }
+    }
+
+    QMessageBox::information(0, "Успешно", "Крч, работает БД твоя!");
+    return true;
 }
 
 #endif // CONNECTION_H

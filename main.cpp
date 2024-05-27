@@ -1,6 +1,9 @@
 #include "mainwindow.h"
 #include <QApplication>
 #include "connection.h"
+#include <QtSql/QSqlDatabase>
+#include <QtCore/QDebug>
+
 
 int main(int argc, char *argv[])
 {
@@ -9,9 +12,8 @@ int main(int argc, char *argv[])
 
     if (!createConnection())
         return 1;
-    if (!createTables())
-        return 1;
 
     w.show();
+    qDebug() << QSqlDatabase::drivers();
     return a.exec();
 }

@@ -1,5 +1,6 @@
-QT       += core gui sql
-
+QT += core gui sql
+LIBS += -L/usr/pgsql-13/lib -lpq
+INCLUDEPATH += /usr/pgsql-13/include
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = QT_PSQL
