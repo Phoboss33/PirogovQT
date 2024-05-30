@@ -37,7 +37,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = QT_PSQL1.0.0
-DISTDIR = /home/phob/untitled2/.tmp/QT_PSQL1.0.0
+DISTDIR = /home/admin/Загрузки/PirogovQT-master/.tmp/QT_PSQL1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-O1 -Wl,-rpath-link,/usr/lib64
 LIBS          = $(SUBLIBS) -L/usr/pgsql-13/lib -lpq /usr/lib64/libQt6Widgets.so /usr/lib64/libQt6Gui.so /usr/lib64/libQt6Sql.so /usr/lib64/libQt6Core.so -lpthread -lGLX -lOpenGL   
@@ -72,9 +72,6 @@ DIST          = /usr/lib64/qt6/mkspecs/features/spec_pre.prf \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_core_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_dbus.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_dbus_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_designer.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_designer_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_designercomponents_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_devicediscovery_support_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_eglfs_kms_gbm_support_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri \
@@ -83,99 +80,20 @@ DIST          = /usr/lib64/qt6/mkspecs/features/spec_pre.prf \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_fb_support_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_gui.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_gui_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_help.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_help_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_input_support_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_kms_support_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_labsanimation.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_labsanimation_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_labsfolderlistmodel.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_labsfolderlistmodel_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_labsqmlmodels.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_labsqmlmodels_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_labssettings.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_labssettings_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_labssharedimage.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_labssharedimage_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_labswavefrontmesh.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_labswavefrontmesh_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_linguist.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_linguist_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_multimedia.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_multimedia_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_multimediaquick_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_multimediawidgets.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_multimediawidgets_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_network.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_network_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_opengl.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_opengl_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_openglwidgets.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_openglwidgets_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_packetprotocol_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_printsupport.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_printsupport_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qdoccatch_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qdoccatchconversionsprivate.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qdoccatchconversionsprivate_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qdoccatchgeneratorsprivate.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qdoccatchgeneratorsprivate_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qml.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qml_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlcompiler.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlcompiler_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlcore.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlcore_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmldebug_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmldom_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlintegration.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlintegration_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmllocalstorage.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmllocalstorage_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlls_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlmodels.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlmodels_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmltest.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmltest_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmltoolingsettings_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmltyperegistrar_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlworkerscript.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlworkerscript_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlxmllistmodel.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlxmllistmodel_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quick.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quick_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickcontrols2.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickcontrols2_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickcontrols2impl.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickcontrols2impl_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickcontrolstestutilsprivate_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickdialogs2.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickdialogs2_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickdialogs2quickimpl.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickdialogs2quickimpl_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickdialogs2utils.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickdialogs2utils_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickeffects_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quicklayouts.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quicklayouts_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickparticles_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickshapes_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quicktemplates2.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quicktemplates2_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quicktestutilsprivate_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickwidgets.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickwidgets_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_spatialaudio.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_spatialaudio_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_sql.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_sql_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_testlib.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_testlib_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_tools_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_uiplugin.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_uitools.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_uitools_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_widgets.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_widgets_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri \
@@ -235,9 +153,6 @@ Makefile: untitled2.pro /usr/lib64/qt6/mkspecs/linux-g++/qmake.conf /usr/lib64/q
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_core_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_dbus.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_dbus_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_designer.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_designer_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_designercomponents_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_devicediscovery_support_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_eglfs_kms_gbm_support_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri \
@@ -246,99 +161,20 @@ Makefile: untitled2.pro /usr/lib64/qt6/mkspecs/linux-g++/qmake.conf /usr/lib64/q
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_fb_support_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_gui.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_gui_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_help.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_help_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_input_support_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_kms_support_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_labsanimation.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_labsanimation_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_labsfolderlistmodel.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_labsfolderlistmodel_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_labsqmlmodels.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_labsqmlmodels_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_labssettings.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_labssettings_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_labssharedimage.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_labssharedimage_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_labswavefrontmesh.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_labswavefrontmesh_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_linguist.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_linguist_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_multimedia.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_multimedia_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_multimediaquick_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_multimediawidgets.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_multimediawidgets_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_network.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_network_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_opengl.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_opengl_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_openglwidgets.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_openglwidgets_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_packetprotocol_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_printsupport.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_printsupport_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qdoccatch_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qdoccatchconversionsprivate.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qdoccatchconversionsprivate_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qdoccatchgeneratorsprivate.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qdoccatchgeneratorsprivate_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qml.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qml_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlcompiler.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlcompiler_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlcore.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlcore_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmldebug_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmldom_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlintegration.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlintegration_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmllocalstorage.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmllocalstorage_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlls_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlmodels.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlmodels_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmltest.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmltest_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmltoolingsettings_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmltyperegistrar_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlworkerscript.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlworkerscript_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlxmllistmodel.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlxmllistmodel_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quick.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quick_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickcontrols2.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickcontrols2_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickcontrols2impl.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickcontrols2impl_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickcontrolstestutilsprivate_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickdialogs2.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickdialogs2_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickdialogs2quickimpl.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickdialogs2quickimpl_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickdialogs2utils.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickdialogs2utils_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickeffects_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quicklayouts.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quicklayouts_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickparticles_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickshapes_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quicktemplates2.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quicktemplates2_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quicktestutilsprivate_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickwidgets.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_quickwidgets_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_spatialaudio.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_spatialaudio_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_sql.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_sql_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_testlib.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_testlib_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_tools_private.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_uiplugin.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_uitools.pri \
-		/usr/lib64/qt6/mkspecs/modules/qt_lib_uitools_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_widgets.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_widgets_private.pri \
 		/usr/lib64/qt6/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri \
@@ -390,9 +226,6 @@ Makefile: untitled2.pro /usr/lib64/qt6/mkspecs/linux-g++/qmake.conf /usr/lib64/q
 /usr/lib64/qt6/mkspecs/modules/qt_lib_core_private.pri:
 /usr/lib64/qt6/mkspecs/modules/qt_lib_dbus.pri:
 /usr/lib64/qt6/mkspecs/modules/qt_lib_dbus_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_designer.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_designer_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_designercomponents_private.pri:
 /usr/lib64/qt6/mkspecs/modules/qt_lib_devicediscovery_support_private.pri:
 /usr/lib64/qt6/mkspecs/modules/qt_lib_eglfs_kms_gbm_support_private.pri:
 /usr/lib64/qt6/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri:
@@ -401,99 +234,20 @@ Makefile: untitled2.pro /usr/lib64/qt6/mkspecs/linux-g++/qmake.conf /usr/lib64/q
 /usr/lib64/qt6/mkspecs/modules/qt_lib_fb_support_private.pri:
 /usr/lib64/qt6/mkspecs/modules/qt_lib_gui.pri:
 /usr/lib64/qt6/mkspecs/modules/qt_lib_gui_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_help.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_help_private.pri:
 /usr/lib64/qt6/mkspecs/modules/qt_lib_input_support_private.pri:
 /usr/lib64/qt6/mkspecs/modules/qt_lib_kms_support_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_labsanimation.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_labsanimation_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_labsfolderlistmodel.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_labsfolderlistmodel_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_labsqmlmodels.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_labsqmlmodels_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_labssettings.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_labssettings_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_labssharedimage.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_labssharedimage_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_labswavefrontmesh.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_labswavefrontmesh_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_linguist.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_linguist_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_multimedia.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_multimedia_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_multimediaquick_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_multimediawidgets.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_multimediawidgets_private.pri:
 /usr/lib64/qt6/mkspecs/modules/qt_lib_network.pri:
 /usr/lib64/qt6/mkspecs/modules/qt_lib_network_private.pri:
 /usr/lib64/qt6/mkspecs/modules/qt_lib_opengl.pri:
 /usr/lib64/qt6/mkspecs/modules/qt_lib_opengl_private.pri:
 /usr/lib64/qt6/mkspecs/modules/qt_lib_openglwidgets.pri:
 /usr/lib64/qt6/mkspecs/modules/qt_lib_openglwidgets_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_packetprotocol_private.pri:
 /usr/lib64/qt6/mkspecs/modules/qt_lib_printsupport.pri:
 /usr/lib64/qt6/mkspecs/modules/qt_lib_printsupport_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_qdoccatch_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_qdoccatchconversionsprivate.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_qdoccatchconversionsprivate_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_qdoccatchgeneratorsprivate.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_qdoccatchgeneratorsprivate_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_qml.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_qml_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlcompiler.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlcompiler_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlcore.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlcore_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_qmldebug_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_qmldom_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlintegration.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlintegration_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_qmllocalstorage.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_qmllocalstorage_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlls_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlmodels.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlmodels_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_qmltest.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_qmltest_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_qmltoolingsettings_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_qmltyperegistrar_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlworkerscript.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlworkerscript_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlxmllistmodel.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_qmlxmllistmodel_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_quick.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_quick_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_quickcontrols2.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_quickcontrols2_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_quickcontrols2impl.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_quickcontrols2impl_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_quickcontrolstestutilsprivate_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_quickdialogs2.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_quickdialogs2_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_quickdialogs2quickimpl.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_quickdialogs2quickimpl_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_quickdialogs2utils.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_quickdialogs2utils_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_quickeffects_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_quicklayouts.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_quicklayouts_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_quickparticles_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_quickshapes_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_quicktemplates2.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_quicktemplates2_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_quicktestutilsprivate_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_quickwidgets.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_quickwidgets_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_spatialaudio.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_spatialaudio_private.pri:
 /usr/lib64/qt6/mkspecs/modules/qt_lib_sql.pri:
 /usr/lib64/qt6/mkspecs/modules/qt_lib_sql_private.pri:
 /usr/lib64/qt6/mkspecs/modules/qt_lib_testlib.pri:
 /usr/lib64/qt6/mkspecs/modules/qt_lib_testlib_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_tools_private.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_uiplugin.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_uitools.pri:
-/usr/lib64/qt6/mkspecs/modules/qt_lib_uitools_private.pri:
 /usr/lib64/qt6/mkspecs/modules/qt_lib_widgets.pri:
 /usr/lib64/qt6/mkspecs/modules/qt_lib_widgets_private.pri:
 /usr/lib64/qt6/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri:
@@ -584,7 +338,7 @@ compiler_moc_header_clean:
 moc_mainwindow.cpp: mainwindow.h \
 		moc_predefs.h \
 		/usr/lib64/qt6/libexec/moc
-	/usr/lib64/qt6/libexec/moc $(DEFINES) --include /home/phob/untitled2/moc_predefs.h -I/usr/lib64/qt6/mkspecs/linux-g++ -I/home/phob/untitled2 -I/usr/pgsql-13/include -I/usr/include/qt6 -I/usr/include/qt6/QtWidgets -I/usr/include/qt6/QtGui -I/usr/include/qt6/QtSql -I/usr/include/qt6/QtCore -I/usr/include/c++/13 -I/usr/include/c++/13/x86_64-redhat-linux -I/usr/include/c++/13/backward -I/usr/lib/gcc/x86_64-redhat-linux/13/include -I/usr/local/include -I/usr/include mainwindow.h -o moc_mainwindow.cpp
+	/usr/lib64/qt6/libexec/moc $(DEFINES) --include /home/admin/Загрузки/PirogovQT-master/moc_predefs.h -I/usr/lib64/qt6/mkspecs/linux-g++ -I/home/admin/Загрузки/PirogovQT-master -I/usr/pgsql-13/include -I/usr/include/qt6 -I/usr/include/qt6/QtWidgets -I/usr/include/qt6/QtGui -I/usr/include/qt6/QtSql -I/usr/include/qt6/QtCore -I/usr/include/c++/13 -I/usr/include/c++/13/x86_64-redhat-linux -I/usr/include/c++/13/backward -I/usr/lib/gcc/x86_64-redhat-linux/13/include -I/usr/local/include -I/usr/include mainwindow.h -o moc_mainwindow.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:

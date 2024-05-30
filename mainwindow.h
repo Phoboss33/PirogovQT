@@ -35,6 +35,8 @@ private slots:
 
     void on_addGenre_clicked();
 
+    void on_ownerButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     QSqlTableModel *model;

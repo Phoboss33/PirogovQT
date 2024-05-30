@@ -34,6 +34,7 @@ public:
     QWidget *main;
     QPushButton *goUserButton;
     QPushButton *goWorkerButton;
+    QPushButton *ownerButton;
     QWidget *user;
     QPushButton *returnToMain;
     QTableView *tableView;
@@ -46,11 +47,9 @@ public:
     QLabel *label_2;
     QLineEdit *titleEdit;
     QLineEdit *releaseEdit;
-    QLineEdit *genreIdEdit;
     QLineEdit *priceEdit;
     QLabel *label_3;
     QLabel *label_4;
-    QLabel *label_5;
     QLabel *label_6;
     QLineEdit *stockEdit;
     QLabel *label_7;
@@ -60,6 +59,8 @@ public:
     QLabel *label_8;
     QWidget *admin;
     QPushButton *returnToMain_3;
+    QTableView *tableOrders;
+    QLabel *label_9;
     QMenuBar *menubar;
     QMenu *menu_2;
     QStatusBar *statusbar;
@@ -73,18 +74,22 @@ public:
         centralwidget->setObjectName("centralwidget");
         stackedWidget = new QStackedWidget(centralwidget);
         stackedWidget->setObjectName("stackedWidget");
-        stackedWidget->setGeometry(QRect(0, 0, 781, 471));
+        stackedWidget->setGeometry(QRect(10, 0, 781, 471));
         stackedWidget->setMaximumSize(QSize(781, 471));
         main = new QWidget();
         main->setObjectName("main");
         goUserButton = new QPushButton(main);
         goUserButton->setObjectName("goUserButton");
-        goUserButton->setGeometry(QRect(210, 200, 141, 26));
+        goUserButton->setGeometry(QRect(100, 200, 141, 26));
         goUserButton->setStyleSheet(QString::fromUtf8("background-color: rgb(51, 209, 122);"));
         goWorkerButton = new QPushButton(main);
         goWorkerButton->setObjectName("goWorkerButton");
-        goWorkerButton->setGeometry(QRect(410, 200, 141, 26));
+        goWorkerButton->setGeometry(QRect(300, 200, 141, 26));
         goWorkerButton->setStyleSheet(QString::fromUtf8("background-color: rgb(51, 209, 122);"));
+        ownerButton = new QPushButton(main);
+        ownerButton->setObjectName("ownerButton");
+        ownerButton->setGeometry(QRect(510, 200, 151, 26));
+        ownerButton->setStyleSheet(QString::fromUtf8("background-color:rgb(224, 27, 36);"));
         stackedWidget->addWidget(main);
         user = new QWidget();
         user->setObjectName("user");
@@ -173,7 +178,7 @@ public:
 "}\n"
 "\n"
 "QTableView::item {\n"
-"    padding: 4px;\n"
+"    padding: 10px;\n"
 "    border: none;\n"
 "}\n"
 "\n"
@@ -190,30 +195,24 @@ public:
         releaseEdit = new QLineEdit(worker);
         releaseEdit->setObjectName("releaseEdit");
         releaseEdit->setGeometry(QRect(80, 300, 61, 26));
-        genreIdEdit = new QLineEdit(worker);
-        genreIdEdit->setObjectName("genreIdEdit");
-        genreIdEdit->setGeometry(QRect(150, 300, 61, 26));
         priceEdit = new QLineEdit(worker);
         priceEdit->setObjectName("priceEdit");
-        priceEdit->setGeometry(QRect(220, 300, 61, 26));
+        priceEdit->setGeometry(QRect(150, 300, 61, 26));
         label_3 = new QLabel(worker);
         label_3->setObjectName("label_3");
         label_3->setGeometry(QRect(10, 280, 66, 18));
         label_4 = new QLabel(worker);
         label_4->setObjectName("label_4");
         label_4->setGeometry(QRect(80, 280, 66, 18));
-        label_5 = new QLabel(worker);
-        label_5->setObjectName("label_5");
-        label_5->setGeometry(QRect(150, 280, 66, 18));
         label_6 = new QLabel(worker);
         label_6->setObjectName("label_6");
-        label_6->setGeometry(QRect(220, 280, 66, 18));
+        label_6->setGeometry(QRect(150, 280, 66, 18));
         stockEdit = new QLineEdit(worker);
         stockEdit->setObjectName("stockEdit");
-        stockEdit->setGeometry(QRect(290, 300, 61, 26));
+        stockEdit->setGeometry(QRect(230, 300, 61, 26));
         label_7 = new QLabel(worker);
         label_7->setObjectName("label_7");
-        label_7->setGeometry(QRect(290, 280, 66, 18));
+        label_7->setGeometry(QRect(230, 280, 66, 18));
         addDisk = new QPushButton(worker);
         addDisk->setObjectName("addDisk");
         addDisk->setGeometry(QRect(70, 400, 151, 26));
@@ -232,6 +231,12 @@ public:
         returnToMain_3 = new QPushButton(admin);
         returnToMain_3->setObjectName("returnToMain_3");
         returnToMain_3->setGeometry(QRect(570, 430, 191, 26));
+        tableOrders = new QTableView(admin);
+        tableOrders->setObjectName("tableOrders");
+        tableOrders->setGeometry(QRect(20, 40, 531, 431));
+        label_9 = new QLabel(admin);
+        label_9->setObjectName("label_9");
+        label_9->setGeometry(QRect(20, 10, 91, 18));
         stackedWidget->addWidget(admin);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -259,6 +264,7 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         goUserButton->setText(QCoreApplication::translate("MainWindow", "\320\257 \320\277\320\276\320\273\321\214\320\267\320\276\320\262\320\260\321\202\320\265\320\273\321\214", nullptr));
         goWorkerButton->setText(QCoreApplication::translate("MainWindow", "\320\257 \321\200\320\260\320\261\320\276\321\202\320\275\320\270\320\272", nullptr));
+        ownerButton->setText(QCoreApplication::translate("MainWindow", "\320\257 \320\262\320\273\320\260\320\264\320\265\320\273\320\265\321\206", nullptr));
         returnToMain->setText(QCoreApplication::translate("MainWindow", "\320\235\320\260 \320\263\320\273\320\260\320\262\320\275\321\203\321\216", nullptr));
         buyButton->setText(QCoreApplication::translate("MainWindow", "\320\232\321\203\320\277\320\270\321\202\321\214", nullptr));
         returnToMain_2->setText(QCoreApplication::translate("MainWindow", "\320\235\320\260 \320\263\320\273\320\260\320\262\320\275\321\203\321\216", nullptr));
@@ -266,13 +272,13 @@ public:
         label_2->setText(QCoreApplication::translate("MainWindow", "\320\222\321\201\320\265 \320\266\320\260\320\275\321\200\321\213", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "title", nullptr));
         label_4->setText(QCoreApplication::translate("MainWindow", "release", nullptr));
-        label_5->setText(QCoreApplication::translate("MainWindow", "genre_id", nullptr));
         label_6->setText(QCoreApplication::translate("MainWindow", "price", nullptr));
         label_7->setText(QCoreApplication::translate("MainWindow", "stock", nullptr));
         addDisk->setText(QCoreApplication::translate("MainWindow", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214 \320\264\320\270\321\201\320\272", nullptr));
         addGenre->setText(QCoreApplication::translate("MainWindow", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214 \320\226\320\260\320\275\321\200", nullptr));
         label_8->setText(QCoreApplication::translate("MainWindow", "\320\275\320\260\320\267\320\262\320\260\320\275\320\270\320\265 \320\266\320\260\320\275\321\200\320\260", nullptr));
         returnToMain_3->setText(QCoreApplication::translate("MainWindow", "\320\235\320\260 \320\263\320\273\320\260\320\262\320\275\321\203\321\216", nullptr));
+        label_9->setText(QCoreApplication::translate("MainWindow", "\320\222\321\201\320\265 \320\267\320\260\320\272\320\260\320\267\321\213", nullptr));
         menu_2->setTitle(QCoreApplication::translate("MainWindow", "\320\222\320\270\320\264\320\265\320\276\320\277\321\200\320\276\320\272\320\260\321\202", nullptr));
     } // retranslateUi
 
